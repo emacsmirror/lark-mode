@@ -4,7 +4,7 @@ Emacs major mode for editing [Lark parser file](https://github.com/lark-parser/l
 
 ## Screenshot
 
-![Screenshot](./assets/yul-mode.png "Screenshot")
+![Screenshot](./assets/lark-mode.png "Screenshot")
 
 ## Installation
 
