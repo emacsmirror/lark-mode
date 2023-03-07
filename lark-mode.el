@@ -130,7 +130,7 @@ Highlight the 1st result."
              (bracket-depth (car ppss)))
         ;; Compute base indentation
         (setq base-indent (if (= bracket-depth 0)
-                              (save-excursion (previous-line)
+                              (save-excursion (forward-line -1)
                                               (back-to-indentation)
                                               (current-indentation))
                             (* tab-width bracket-depth)))
@@ -141,7 +141,7 @@ Highlight the 1st result."
               ((looking-at "\s*:\s*")
                ;; indent for rule definition.
                (setq new-indent (+ base-indent tab-width)))
-              ((and (looking-back "\s*:\s*[^\n]*\n\s*")
+              ((and (looking-back "\s*:\s*[^\n]*\n\s*" nil nil)
                     (looking-at "\s*|"))
                ;; indent for multiple-line
                (setq new-indent (+ base-indent tab-width)))
@@ -167,7 +167,7 @@ Highlight the 1st result."
   "Regular expression to generate `Imenu' outline.")
 
 (defun lark-mode--imenu-create-index ()
-  "Generate outline of Lark code for `Imenu.'"
+  "Generate outline of Lark code for `Imenu.'."
   (save-excursion
     (imenu--generic-function lark-mode--imenu-generic-expression)))
 
