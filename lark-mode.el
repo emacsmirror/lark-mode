@@ -1,12 +1,13 @@
-;;; lark-mode.el --- Major mode for editing Lark parser code.
+;;; lark-mode.el --- Major mode for editing Lark parser code
 
 ;; Copyright © 2023, by Ta Quang Trung
 
 ;; Author: Ta Quang Trung
 ;; Version: 0.0.1
 ;; Created: 06 March 2023
-;; Keywords: Parser, Lark, Python
+;; Keywords: languages
 ;; Homepage: https://github.com/taquangtrung/lark-mode
+;; Package-Requires: ((emacs "24.3"))
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
