@@ -111,7 +111,7 @@ Highlight the 1st result."
   (let ((pos (- (point-max) (point)))
         (indent (or indent (lark-mode--calculate-indentation)))
         (shift-amount nil)
-        (beg (progn (beginning-of-line) (point))))
+        (beg (point-at-bol)))
     (skip-chars-forward " \t")
     (if (null indent)
         (goto-char (- (point-max) pos))
