@@ -188,6 +188,7 @@ Highlight the 1st result."
   (setq-local tab-width 4)
   (setq-local indent-tabs-mode nil)
   (setq-local indent-line-function #'lark-mode-indent-line)
+  (setq-local indent-region-function #'ignore)      ;; not supported yet
 
   ;; Set comment command
   (setq-local comment-start "//")
