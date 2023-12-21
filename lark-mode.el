@@ -112,6 +112,7 @@ Highlight the 1st result."
         (indent (or indent (lark-mode--calculate-indentation)))
         (shift-amount nil)
         (beg (point-at-bol)))
+    (beginning-of-line)
     (skip-chars-forward " \t")
     (if (null indent)
         (goto-char (- (point-max) pos))
